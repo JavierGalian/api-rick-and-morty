@@ -7,13 +7,16 @@ function ListCharacters(){
     const [caracter, setCaracter ] = useState ([]);
     const [loading, setLoading] = useState (true);
     const [page, setPage] = useState(1);
+    const [cantPage, setCantPage] = useState(0);
 
     useEffect(() => {
         const url = `https://rickandmortyapi.com/api/character?page=${page}`;
         fetchData(url).then((data) => {
         setCaracter(data.results);
+        setCantPage(data.info.pages);
         setLoading(false);
         console.log(data.results)
+        console.log(data.info.pages);
         });
 
     }, [page]);
