@@ -1,0 +1,41 @@
+.navbar{
+    display: flex;
+}
+
+.logo1{
+    width: 100px;
+    height: 100px;
+    border-radius: 160px;
+}
+
+.logo2{
+    width: 200px;
+}
+
+.navbar-nav{
+    margin-right: 50px;
+}
+
+.navbar-list-link{
+    display: flex;
+}
+
+.navbar-list-link li{
+    list-style: none;
+    padding: 10px 20px;
+}
+
+.navbar-list-link a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-list-link a:hover{
+    color: rgb(56, 247, 56);
+}
+
+.navbar-list-link a.active{
+    color: rgb(56, 247, 56);
+}
+
+
