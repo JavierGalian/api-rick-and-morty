@@ -34,10 +34,10 @@ function ListLocations(){
                             dataa.map((locations) => {
                                 return (
                                     <div className='col-md-4' >
-                                        <div key={locations.id} className="text.center p-5 ">
-                                            <h3>{locations.name}</h3>
-                                            <p>{locations.type}</p>
-                                            <p>{locations.dimension}</p>
+                                        <div key={locations.id} className="text.center p-5 text-white">
+                                            <h3>Nombre: {locations.name}</h3>
+                                            <p>Tipo: {locations.type}</p>
+                                            <p>Dimension: {locations.dimension}</p>
                                         </div>
                                     </div>
                                 );

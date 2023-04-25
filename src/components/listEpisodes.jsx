@@ -1,6 +1,8 @@
 import { fetchData } from "../api/api";
 import { useEffect, useState } from "react";
 
+import imgEpisodes from '../assets/imgEpisodes.jpg';
+
 function NavPage(props) {
     return (
         <header className='d-flex justify-content-between'>
@@ -34,10 +36,11 @@ function ListEpisodes (){
                             dataa.map((episode) => {
                                 return (
                                     <div className='col-md-4' >
-                                        <div key={episode.id} className="text.center p-5 ">
-                                            <h3>{episode.name}</h3>
-                                            <p>{episode.episode}</p>
-                                            <p>{episode.air_date}</p>
+                                        <div key={episode.id} className="text.center p-5 text-white">
+                                            <img src={imgEpisodes} alt={episode.name} />
+                                            <h3>Nombre: {episode.name}</h3>
+                                            <p>Episodio: {episode.episode}</p>
+                                            <p>Emision: {episode.air_date}</p>
                                         </div>
                                     </div>
                                 );
