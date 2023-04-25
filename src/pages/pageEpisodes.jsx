@@ -1,5 +1,5 @@
-import Navbar from "../../../Rick-and-Morty/src/components/navbar";
-import ListEpisodes from '../../../Rick-and-Morty/src/components/listEpisodes';
+import Navbar from "../components/navbar";
+import ListEpisodes from '../components/listEpisodes';
 
 
 function PageEpisodes() {

@@ -46,16 +46,16 @@ function Navbar() {
                 <nav className="navbar-nav">
                     <ul className="navbar-list-link">
                         <li>
-                            <Link to={`/`} className={page === 'Home' ? 'active' : ``} onClick={() => { handlePageClick('Home') }}>Home</Link>
+                            <Link to={`${import.meta.env.BASE_URL}`} className={page === 'Home' ? 'active' : ``} onClick={() => { handlePageClick('Home') }}>Home</Link>
                         </li>
                         <li>
-                            <Link to={`/episodes`} className={page === 'episodios' ? 'active' : ``} onClick={() => { handlePageClick('episodios') }}>episodios</Link>
+                            <Link to={`${import.meta.env.BASE_URL}episodes`} className={page === 'episodios' ? 'active' : ``} onClick={() => { handlePageClick('episodios') }}>episodios</Link>
                         </li>
                         <li>
-                            <Link to={`/characters`} className={page === 'personajes' ? 'active' : ``} onClick={() => { handlePageClick('personajes') }}>personajes </Link>
+                            <Link to={`${import.meta.env.BASE_URL}characters`} className={page === 'personajes' ? 'active' : ``} onClick={() => { handlePageClick('personajes') }}>personajes </Link>
                         </li>
                         <li>
-                            <Link to={`/locations`} className={page === 'ubicacion' ? 'active' : ``} onClick={() => { handlePageClick('ubicacion') }}>ubicacion</Link>
+                            <Link to={`${import.meta.env.BASE_URL}locations`} className={page === 'ubicacion' ? 'active' : ``} onClick={() => { handlePageClick('ubicacion') }}>ubicacion</Link>
                         </li>
                     </ul>
                 </nav>

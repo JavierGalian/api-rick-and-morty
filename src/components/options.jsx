@@ -10,9 +10,9 @@ import ImageLocations from '../assets/options/locationsCopi.jpg';
 
 
 const menu = [
-    { option: 'episodios', Image: ImageEpisodes, src: 'imagen2', url: '/episodes'},
-    { option: 'personajes', Image: ImageCharacters, src: 'imagen1', url: '/characters'},
-    { option: 'ubicacion', Image: ImageLocations, src: 'imagen3', url: '/locations'},
+    { option: 'episodios', Image: ImageEpisodes, src: 'imagen2', url: `${import.meta.env.BASE_URL}episodes`},
+    { option: 'personajes', Image: ImageCharacters, src: 'imagen1', url: `${import.meta.env.BASE_URL}characters`},
+    { option: 'ubicacion', Image: ImageLocations, src: 'imagen3', url: `${import.meta.env.BASE_URL}locations`},
 ];
 
 

@@ -11,19 +11,19 @@ import PageCharacters from './pages/pageCharacters';
 import PageLocations from './pages/pageLocations';
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: 'api-rick-and-morty/',
     element: <App/>
   },
   {
-    path: '/episodes',
+    path: 'api-rick-and-morty/episodes',
     element: <PageEpisodes/>
   },
   {
-    path: '/characters',
+    path: 'api-rick-and-morty/characters',
     element: <PageCharacters/>
   },
   {
-    path: '/locations',
+    path: 'api-rick-and-morty/locations',
     element: <PageLocations/>
   }
 ])

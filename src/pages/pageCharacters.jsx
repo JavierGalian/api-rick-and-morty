@@ -1,5 +1,5 @@
-import Navbar from "../../../Rick-and-Morty/src/components/navbar";
-import ListCharacters from "../../../Rick-and-Morty/src/components/listCharacters";
+import Navbar from "../components/navbar";
+import ListCharacters from "../components/listCharacters";
 
 
 
