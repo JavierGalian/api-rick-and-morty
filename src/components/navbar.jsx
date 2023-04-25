@@ -1,4 +1,4 @@
-import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useLocation,Link, BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import '../styles/navbar.css';
 
@@ -9,30 +9,27 @@ import Logo2Redirect from '../assets/logo8.jpg';
 
 
 function Navbar() {
-
-
     const [page, setPage] = useState('Home');
-
-    const handlePageClick = (pageName) => {
-        setPage(pageName);
-        console.log(pageName);
-    };
+    const location = useLocation();
 
     useEffect(() => {
-        // Obtener el nombre de la página actual de la URL
-        const currentPage = window.location.pathname.split('/')[1];
+        const path = location.pathname.substring(1);
 
-        // Actualizar el estado 'page'
-        setPage(currentPage);
+        setPage(path);
 
-        // Agregar la clase 'active' a la opción de la barra de navegación correspondiente
         const navLinks = document.querySelectorAll('.navbar-nav a');
         navLinks.forEach(link => {
-            if (link.getAttribute('href').substring(1) === currentPage) {
+            if (link.getAttribute('href').substring(1) === path) {
                 link.classList.add('active');
+            } else {
+                link.classList.remove('active');
             }
         });
-    }, []);
+    }, [location]);
+
+    const handlePageClick = (pageName) => {
+        setPage(pageName.toLowerCase());
+    };
 
 
     return (
