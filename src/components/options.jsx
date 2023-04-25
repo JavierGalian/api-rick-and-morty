@@ -26,7 +26,7 @@ function OptionsMenu() {
                         return (
                             <div className='col-md-4 text-center'>
                                 <Link className='link-menu-option' to={menu.url}>
-                                <img className='img-menu-option img-fluid rounded-pill' src={menu.Image} alt={menu.src} />
+                                <img className='img-menu-option rounded-pill h-10 object-fit-cover' src={menu.Image} alt={menu.src} />
                                 <p className='text-menu-option'>{menu.option}</p>
                                 </Link>
                             </div>
