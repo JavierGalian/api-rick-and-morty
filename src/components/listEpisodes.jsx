@@ -6,7 +6,7 @@ import imgEpisodes from '../assets/imgEpisodes.jpg';
 
 
 function ListEpisodes (){
-    const [dataa, setData] = useState([]);
+    const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [page, setPage] = useState(1);
     const [cantPage, setCantPage] = useState(0);
@@ -14,11 +14,12 @@ function ListEpisodes (){
     useEffect(() => {
         const url = `https://rickandmortyapi.com/api/episode?page=${page}`;
         fetchData(url).then((data) => {
-            setData(data.results);
-            setCantPage(data.info.pages)
-            setLoading(false);
-            console.log(data.results)
-            console.log(data.info.pages)
+            if (data && data.results) { // Verificar si data y data.results tienen valor
+                setData(data.results);
+                setCantPage(data.info.pages);
+                setLoading(false);
+                console.log(data.results);
+                console.log(data.info.pages); }
         });
 
     }, [page]);
@@ -29,7 +30,7 @@ function ListEpisodes (){
                 <div className='row'>
                     {
                         loading ? (<h2>Loading</h2>) : (
-                            dataa.map((episode) => {
+                            data.map((episode) => {
                                 return (
                                     <div className='col-md-4' >
                                         <div key={episode.id} className="text.center p-5 text-white">
