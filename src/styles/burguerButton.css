@@ -1,0 +1,24 @@
+.panel-button{
+    position: fixed;
+    z-index: 998;
+    width: 100%;
+    background-color: rgb(255, 127, 127);
+}
+
+.button-burguer{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(56, 247, 56);
+    @media (min-width: 1000px){
+        display: none;
+    }
+}

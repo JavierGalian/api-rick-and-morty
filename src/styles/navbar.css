@@ -16,6 +16,10 @@
     margin-right: 50px;
 }
 
+.navbar-nav.is-active{
+    transform: translate(0,0);
+}
+
 .navbar-list-link{
     display: flex;
 }
@@ -38,4 +42,37 @@
     color: rgb(56, 247, 56);
 }
 
+@media only screen and (max-width: 1000px){
+    .navbar-nav{
+        position: fixed;
+        z-index: 998;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: blue;
+    
+        transition: transform 0.3s ease;
+        transform: translate(0, -100%);
+    }
+    /*---- burguer button ----*/
+    .links-nav{
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
 
+    .links-nav a{
+        padding: 2rem;
+        width: inherit;
+        display: block;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: blueviolet;
+        transition: all 0.3 ease;
+    }
+}
