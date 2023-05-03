@@ -7,7 +7,6 @@ function PageCharacters(){
     return(
         <>
             <Navbar/>
-            <h2>Personajes</h2>
             <ListCharacters/>
 
         </>

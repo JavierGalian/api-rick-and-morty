@@ -51,7 +51,7 @@
         left: 0;
         right: 0;
         width: 100%;
-        background-color: blue;
+        background-color: #060d17;
     
         transition: transform 0.3s ease;
         transform: translate(0, -100%);
@@ -72,7 +72,7 @@
         display: block;
         font-size: 1.5rem;
         text-decoration: none;
-        color: blueviolet;
+        color: white;
         transition: all 0.3 ease;
     }
 }

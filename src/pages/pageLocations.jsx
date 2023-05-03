@@ -7,7 +7,6 @@ function PageLocations() {
     return (
         <>
             <Navbar />
-            <h2>ubicaiones</h2>
             <ListLocations/>
             
         </>

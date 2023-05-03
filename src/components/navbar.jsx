@@ -9,8 +9,6 @@ import { useEffect, useState } from "react";
 import Logo1 from '../assets/logo9.jpg';
 import Logo2Redirect from '../assets/logo8.jpg';
 
-import BurguerButton from "./burguerButton";
-
 function Navbar() {
     const [page, setPage] = useState('Home');
     const location = useLocation();
@@ -51,7 +49,7 @@ function Navbar() {
 
                 <div className="navbar-logos">
                     <img src={Logo1} alt="" className="logo1" />
-                    <Link to={'/'}> <img src={Logo2Redirect} alt="" className="logo2" /> </Link>
+                    <Link to={`${import.meta.env.BASE_URL}`}> <img src={Logo2Redirect} alt="" className="logo2" /> </Link>
                 </div>
                 <nav className={`navbar-nav ${isNavActive ? 'is-active' : ''}`}>
                     <ul className='navbar-list-link links-nav'>
